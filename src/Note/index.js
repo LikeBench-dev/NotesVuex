@@ -46,13 +46,16 @@ export default new Vuex.Store({
         ],
     },
     mutations: {
+        // addNote (state, note) {
+        //     Vue.set(state.note, 'title', note.title);
+        //     Vue.set(state.note, 'descr', note.descr);
+        //     Vue.set(state.note, 'priority', note.priority);
+        //     Vue.set(state.note, 'id', note.id);
+        //     Vue.set(state.note, 'date', note.date);
+        //     state.notes.push(Object.assign({}, state.note));
+        // }
         addNote (state, note) {
-            Vue.set(state.note, 'title', note.title);
-            Vue.set(state.note, 'descr', note.descr);
-            Vue.set(state.note, 'priority', note.priority);
-            Vue.set(state.note, 'id', note.id);
-            Vue.set(state.note, 'date', note.date);
-            state.notes.push(Object.assign({}, state.note));
+            state.notes.push(note)
         }
     },
     actions: {
